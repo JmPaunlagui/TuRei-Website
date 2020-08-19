@@ -3,7 +3,6 @@ const Category = require('../models/Category')
 
 module.exports = async function (req, res, next) {
     const { categoryId } = req.params
-
     try {
         let category = await Category.findById(categoryId)
 
@@ -12,7 +11,6 @@ module.exports = async function (req, res, next) {
                 error: "Category not found"
             })
         }
-    
         req.category = category
         next()
     } catch (error) {
