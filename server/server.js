@@ -21,6 +21,7 @@ app.use(cors());
 // Routes
 app.use('/api/user/', require('./routes/auth.route'));
 app.use('/api/category/', require('./routes/category.route'));
+app.use('/api/product/', require('./routes/product.route'));
 
 // Page Not founded
 app.use((req, res) => {
