@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 require('dotenv').config({
     path: './config/index.env',

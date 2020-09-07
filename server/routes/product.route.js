@@ -11,8 +11,6 @@ const {
     send
 } = require('process');
 
-
-
 // @route   Get api/product/:productId
 // @desc    Get a list of products  with filter 
 //  options(order = asc or desc, sortBy any product propert like name, limit, number of returned product)
@@ -38,6 +36,7 @@ router.get('/list', async (req, res) => {
         res.status(500).send('Invalid querys');
     }
 });
+
 // @route   Get api/product/categories
 // @desc    Get a list categories of products
 // @access  Public
@@ -155,8 +154,6 @@ router.get('/related/:productId', productById, async (req, res) => {
     }
 
 })
-
-
 
 // @route   Post api/product/
 // @desc    Create a Product
